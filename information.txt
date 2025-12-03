@@ -1,0 +1,267 @@
+# HRMS (Human Resource Management System) - Module Documentation
+
+## Overview
+This is a full-stack HRMS application built with Django REST Framework (backend) and React (frontend) using Vite as the build tool.
+
+---
+
+## BACKEND MODULES (Django)
+
+### Core Django Framework
+- **Django==5.2.8**
+  - Function: Main web framework providing MVC architecture, ORM, authentication, admin interface
+  - How it works: Handles HTTP requests, database operations, user authentication, and serves REST API endpoints
+  - Key features: Built-in admin panel, ORM, security features, URL routing
+
+### Database & API
+- **djangorestframework==3.16.1**
+  - Function: Provides powerful and flexible toolkit for building Web APIs
+  - How it works: Extends Django to create RESTful APIs with serializers, viewsets, and authentication
+  - Key features: API serialization, permission classes, viewsets, pagination
+
+### CORS Support
+- **django-cors-headers==4.9.0**
+  - Function: Enables Cross-Origin Resource Sharing (CORS) for Django APIs
+  - How it works: Adds CORS headers to API responses allowing frontend on different port to communicate
+  - Key features: Configurable allowed origins, credentials support
+
+### Database Components
+- **sqlparse==0.5.3**
+  - Function: SQL parsing and formatting library
+  - How it works: Used by Django for SQL query parsing and formatting
+  - Key features: SQL validation, formatting, parsing
+
+### ASGI Support
+- **asgiref==3.11.0**
+  - Function: ASGI reference implementation and utilities
+  - How it works: Provides ASGI (Asynchronous Server Gateway Interface) support for Django
+  - Key features: Async request handling, middleware support
+
+### Django Allauth (Authentication)
+- **django-allauth** (Not in requirements.txt but referenced in settings)
+  - Function: Comprehensive authentication system with social login support
+  - How it works: Handles user registration, login, logout, email verification, and social authentication
+  - Key features: Social login (Google), email verification, account management
+
+---
+
+## FRONTEND MODULES (React + Vite)
+
+### Core React Framework
+- **react==19.2.0**
+  - Function: JavaScript library for building user interfaces
+  - How it works: Component-based architecture with virtual DOM for efficient rendering
+  - Key features: Hooks, JSX, component lifecycle, state management
+
+- **react-dom==19.2.0**
+  - Function: React renderer for web browsers
+  - How it works: Bridges React components to actual DOM elements in the browser
+  - Key features: DOM manipulation, event handling, server-side rendering support
+
+### Routing
+- **react-router-dom==7.9.6**
+  - Function: Declarative routing for React applications
+  - How it works: Provides client-side routing with URL-based component rendering
+  - Key features: Route definitions, navigation, protected routes, URL parameters
+
+### HTTP Client
+- **axios==1.13.2**
+  - Function: Promise-based HTTP client for making API requests
+  - How it works: Handles HTTP requests to Django backend with interceptors and error handling
+  - Key features: Request/response transformation, timeout handling, automatic JSON parsing
+
+### Draggable & Resizable Components
+- **react-rnd==10.5.2**
+  - Function: Draggable and resizable React component wrapper
+  - How it works: Provides drag and resize functionality to React components
+  - Key features: Mouse/touch support, boundary constraints, resize handles
+
+---
+
+## DEVELOPMENT TOOLS
+
+### Build Tool
+- **vite==7.2.4**
+  - Function: Modern build tool and development server
+  - How it works: Provides fast development server with HMR and optimized production builds
+  - Key features: Hot Module Replacement, ES modules support, fast builds
+
+### React Plugin for Vite
+- **@vitejs/plugin-react==5.1.1**
+  - Function: Vite plugin for React development
+  - How it works: Enables React JSX support, fast refresh, and React-specific optimizations
+  - Key features: JSX transformation, React Fast Refresh
+
+### Code Quality
+- **eslint==9.39.1**
+  - Function: JavaScript/TypeScript linting utility
+  - How it works: Analyzes code for potential errors and enforces coding standards
+  - Key features: Configurable rules, plugin system, auto-fixing
+
+- **@eslint/js==9.39.1**
+  - Function: ESLint's recommended JavaScript rules
+  - How it works: Provides default ESLint configuration for JavaScript
+  - Key features: Best practices, error prevention
+
+- **eslint-plugin-react-hooks==7.0.1**
+  - Function: ESLint rules for React Hooks
+  - How it works: Enforces rules of React Hooks to prevent common mistakes
+  - Key features: Hook dependency rules, custom hook validation
+
+- **eslint-plugin-react-refresh==0.4.24**
+  - Function: ESLint plugin for React Fast Refresh
+  - How it works: Ensures components are compatible with Fast Refresh
+  - Key features: Component validation, HMR compatibility
+
+### Type Definitions
+- **@types/react==19.2.5**
+  - Function: TypeScript type definitions for React
+  - How it works: Provides type information for React APIs for better IDE support
+  - Key features: IntelliSense, type checking, documentation
+
+- **@types/react-dom==19.2.3**
+  - Function: TypeScript type definitions for React DOM
+  - How it works: Provides type information for React DOM APIs
+  - Key features: DOM type definitions, event types
+
+### Global Variables
+- **globals==16.5.0**
+  - Function: Global variables for ESLint
+  - How it works: Provides global variable definitions for ESLint configuration
+  - Key features: Browser globals, Node.js globals, ES standards
+
+---
+
+## PROJECT STRUCTURE & DATA FLOW
+
+### Backend (Django)
+```
+hrms_backend/
+├── hrms_backend/          # Project configuration
+│   ├── settings.py        # Django settings including CORS, auth, database
+│   ├── urls.py           # Main URL routing
+│   └── wsgi.py           # WSGI configuration
+└── api/                  # Main Django app
+    ├── models.py         # Database models (Todo, User relationships)
+    ├── views.py          # API endpoints and business logic
+    ├── serializers.py    # Data serialization for API
+    ├── urls.py          # API URL routing
+    └── admin.py         # Django admin configuration
+```
+
+### Frontend (React)
+```
+frontend/src/
+├── components/           # React components
+│   ├── App.jsx          # Main application with routing
+│   ├── AdminDashboard.jsx # Admin role selection interface
+│   ├── HODDashboard.jsx  # HOD-specific dashboard
+│   ├── EmployeeDashboard.jsx # Employee dashboard
+│   └── [Other components...] # Feature-specific components
+├── App.css              # Application styles
+└── main.jsx            # Application entry point
+```
+
+### Data Flow
+1. **Frontend** makes HTTP requests using **axios** to Django backend
+2. **Django** receives requests via **djangorestframework** endpoints
+3. **Django ORM** interacts with **SQLite** database
+4. **CORS headers** (django-cors-headers) allow cross-origin requests
+5. **React Router** handles client-side navigation
+6. **Vite** serves frontend with proxy to backend API
+
+### Authentication Flow
+1. User logs in via React form
+2. Credentials sent to Django backend
+3. Django authenticates using built-in auth system
+4. JWT/session tokens returned to frontend
+5. Frontend stores tokens and includes in subsequent requests
+6. Protected routes check authentication status
+
+### Development Workflow
+1. **Vite dev server** runs on port 5173
+2. **Django development server** runs on port 8000
+3. Vite proxy forwards `/api/*` requests to Django backend
+4. **Hot Module Replacement** provides instant frontend updates
+5. **ESLint** maintains code quality during development
+
+---
+
+## KEY FEATURES IMPLEMENTED
+
+### User Management
+- Multi-role authentication (Admin, HOD, Principal, Employee)
+- Role-based access control
+- User registration and profile management
+
+### Dashboard Systems
+- Admin dashboard with role switching
+- HOD dashboard with department management
+- Employee dashboard with personal information
+- Real-time statistics and KPIs
+
+### Attendance System
+- Mark attendance (present/absent/leave)
+- Attendance history tracking
+- Department-wise attendance reports
+
+### Leave Management
+- Leave request submission
+- Leave approval workflow
+- Leave balance tracking
+
+### Employee Management
+- Employee registration and onboarding
+- Employee profile management
+- Department assignment
+
+### Announcements
+- Create and manage announcements
+- Role-based announcement visibility
+- Real-time announcement updates
+
+---
+
+## DEPLOYMENT CONSIDERATIONS
+
+### Production Requirements
+1. Replace SQLite with PostgreSQL/MySQL for production
+2. Configure proper CORS origins for production domain
+3. Set up proper authentication (JWT/OAuth)
+4. Configure HTTPS and security headers
+5. Set up proper logging and monitoring
+6. Configure static file serving (CDN recommended)
+
+### Security Notes
+- Django secret key should be environment variable in production
+- CORS should be restricted to specific domains
+- Database credentials should use environment variables
+- Enable Django security middleware in production
+- Implement rate limiting for API endpoints
+
+---
+
+## API ENDPOINTS SUMMARY
+
+### Authentication
+- POST /api/login/ - User login
+- POST /api/logout/ - User logout
+
+### Dashboard Data
+- GET /api/dashboard/ - General dashboard statistics
+- GET /api/hod/ - HOD-specific data
+- GET /api/principal/ - Principal-specific data
+- GET /api/employees/ - Employee data
+
+### Management
+- GET/POST /api/leave-request/ - Leave management
+- GET/POST /api/attendance/ - Attendance management
+- GET/POST /api/announcements/ - Announcement management
+- GET/POST /api/departments/ - Department management
+
+### File Operations
+- File upload/download support for employee documents
+- Profile picture management
+- Document storage with Django's file system
+
+This comprehensive module documentation provides a complete overview of all technologies used in the HRMS application and their specific roles in the system architecture.

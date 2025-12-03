@@ -1,0 +1,239 @@
+:root {
+  --color-background-light: #f8f9fa;
+  --color-text-light: #212529;
+  --color-link-light: #646cff;
+  --color-header-bg-light: #e9ecef;
+  --color-heading-light: #343a40;
+  --color-sidebar-bg-light: #e9ecef;
+  --color-sidebar-text-light: #495057;
+  --color-button-bg-light: #dee2e6;
+  --color-form-bg-light: #ffffff;
+  --color-card-bg-1-light: #d1e7dd;
+  --color-card-bg-2-light: #ffeeba;
+  --color-card-bg-3-light: #f8d7da;
+  --color-card-text-1-light: #0f5132;
+  --color-card-text-2-light: #664d03;
+  --color-card-text-3-light: #842029;
+  --color-border-light: #ced4da;
+
+  --color-background-dark: #212121;
+  --color-text-dark: #e0e0e0;
+  --color-link-dark: #9e9e9e;
+  --color-header-bg-dark: #3a3a3a;
+  --color-heading-dark: #f0f0f0;
+  --color-sidebar-bg-dark: #3a3a3a;
+  --color-sidebar-text-dark: #bdbdbd;
+  --color-button-bg-dark: #424242;
+  --color-form-bg-dark: #2c2c2c;
+  --color-card-bg-1-dark: #3d5a80;
+  --color-card-bg-2-dark: #ee6c4d;
+  --color-card-bg-3-dark: #98c1d9;
+  --color-card-text-1-dark: #e0f2f1;
+  --color-card-text-2-dark: #fcf4e8;
+  --color-card-text-3-dark: #e0f7fa;
+  --color-border-dark: #424242;
+
+
+  --shadow-header: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-sidebar: 2px 0 10px rgba(0, 0, 0, 0.05);
+
+  --sidebar-width: 250px;
+  --sidebar-width-collapsed: 70px; /* For hover state, not used yet */
+  --header-height: 80px; /* Example, if we had a fixed header */
+
+  /* Breakpoints */
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 480px;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.theme-light {
+  --color-background: var(--color-background-light);
+  --color-text: var(--color-text-light);
+  --color-link: var(--color-link-light);
+  --color-header-bg: var(--color-header-bg-light);
+  --color-heading: var(--color-heading-light);
+  --color-sidebar-bg: var(--color-sidebar-bg-light);
+  --color-sidebar-text: var(--color-sidebar-text-light);
+  --color-button-bg: var(--color-button-bg-light);
+  --color-form-bg: var(--color-form-bg-light);
+  --color-card-bg-1: var(--color-card-bg-1-light);
+  --color-card-bg-2: var(--color-card-bg-2-light);
+  --color-card-bg-3: var(--color-card-bg-3-light);
+  --color-card-text-1: var(--color-card-text-1-light);
+  --color-card-text-2: var(--color-card-text-2-light);
+  --color-card-text-3: var(--color-card-text-3-light);
+  --color-border: var(--color-border-light);
+}
+
+body.theme-dark {
+  --color-background: var(--color-background-dark);
+  --color-text: var(--color-text-dark);
+  --color-link: var(--color-link-dark);
+  --color-header-bg: var(--color-header-bg-dark);
+  --color-heading: var(--color-heading-dark);
+  --color-sidebar-bg: var(--color-sidebar-bg-dark);
+  --color-sidebar-text: var(--color-sidebar-text-dark);
+  --color-button-bg: var(--color-button-bg-dark);
+  --color-form-bg: var(--color-form-bg-dark);
+  --color-card-bg-1: var(--color-card-bg-1-dark);
+  --color-card-bg-2: var(--color-card-bg-2-dark);
+  --color-card-bg-3: var(--color-card-bg-3-dark);
+  --color-card-text-1: var(--color-card-text-1-dark);
+  --color-card-text-2: var(--color-card-text-2-dark);
+  --color-card-text-3: var(--color-card-text-3-dark);
+  --color-border: var(--color-border-dark);
+}
+
+#root {
+  /* No default styles, will be managed by App.jsx layout */
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--color-sidebar-bg);
+  color: var(--color-sidebar-text);
+  padding: 20px;
+  box-shadow: var(--shadow-sidebar);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
+  position: relative; /* Needed for transform */
+}
+
+.sidebar-hidden {
+  transform: translateX(-200px); /* Leave small edge visible for hover */
+  width: 60px; /* Small visible strip for hover */
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Hover area to show sidebar */
+.sidebar-hidden:hover {
+  transform: translateX(0);
+  width: var(--sidebar-width);
+  padding: 20px;
+}
+
+/* Login/Registration Page Centering */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.login-form-card {
+  max-width: 450px;
+  width: 90%; /* Make it responsive */
+  margin: auto; /* Center the card itself */
+  padding: 40px;
+  background: var(--color-background);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  display: flex; /* Use flexbox for internal content alignment */
+  flex-direction: column;
+  align-items: center; /* Center items horizontally within the flex container */
+  border: 1px solid rgba(100, 108, 255, 0.2);
+  text-align: center; /* Center text content inside */
+}
+
+.login-form-card form {
+  width: 100%; /* Ensure form takes full width of its parent */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center form elements */
+}
+
+.login-form-card form div {
+  width: 100%; /* Ensure each input div takes full width */
+  text-align: left; /* Align labels to the left within their div */
+}
+
+.login-form-card form input[type="text"],
+.login-form-card form input[type="email"],
+.login-form-card form input[type="password"],
+.login-form-card form input[type="date"],
+.login-form-card form input[type="file"] {
+  width: calc(100% - 24px); /* Account for padding */
+  max-width: 380px; /* Max width for inputs for better readability */
+  margin: 0 auto; /* Center inputs horizontally */
+  display: block; /* Make inputs block level to apply margin:auto */
+}
+
+.login-form-card form button {
+  width: calc(100% - 24px); /* Ensure button is also responsive */
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.main-content-area {
+  flex: 1;
+  padding: 30px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: var(--breakpoint-md)) {
+  .app-container {
+    flex-direction: column; /* Stack sidebar and main content vertically */
+  }
+
+  .sidebar {
+    width: 100%; /* Full width sidebar */
+    height: auto;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Adjust shadow for top/bottom */
+    transform: translateX(0); /* Ensure sidebar is visible by default on mobile */
+  }
+
+  /* On smaller screens, the sidebar will always be full width when visible */
+  /* We might want a different hiding mechanism, e.g., position absolute and transform Y */
+  .sidebar-hidden {
+    transform: translateY(-100%); /* Hide upwards on mobile */
+    height: 0;
+    padding: 0;
+  }
+
+  .main-content-area {
+    padding: 20px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Allow content to take full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+  }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .sidebar {
+    padding: 10px; /* Even less padding on very small screens */
+  }
+
+  .main-content-area {
+    padding: 15px;
+  }
+}

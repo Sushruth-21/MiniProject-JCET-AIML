@@ -1,0 +1,41 @@
+# About this HRMS Backend and Frontend Project
+
+This document provides a high-level overview of the Django backend and the intended React frontend for the HRMS (Human Resources Management System) project.
+
+## Project Structure
+
+- `hrms_backend/`: The main Django project directory (Backend).
+    - `hrms_backend/settings.py`: Django project settings, including installed apps, middleware, database configuration, and CORS settings.
+    - `hrms_backend/urls.py`: Main URL configuration for the Django project, including routing for the `api` app and a welcome view for the root URL.
+    - `api/`: The Django app that handles the HRMS API endpoints.
+        - `api/views.py`: Contains all the API views for login, admin, HOD, principal, employee pages, leave requests, announcements, and dashboard. These views interact with `db.json` to manage data.
+        - `api/urls.py`: URL configuration specific to the `api` app.
+    - `db.json`: A simple JSON file acting as a temporary database to store users, HODs, principals, employees, leave requests, and announcements.
+- `frontend/`: The React project directory (Frontend - *requires manual setup*).
+    - `vite.config.js`: Configuration for Vite, including proxy settings to forward API requests to the Django backend.
+    - `src/App.jsx`: Main React application component, will contain the core UI logic (e.g., login form).
+- `venv/`: The Python virtual environment where backend project dependencies are installed.
+- `requirements.txt`: Lists all Python packages required for the backend project.
+- `README.md`: Provides comprehensive instructions on how to set up and run both the Django backend and the React frontend, and lists available API endpoints.
+
+## Core Functionalities Implemented (Backend)
+
+-   **User Authentication:** A basic login system with hardcoded 'admin' and 'employee' credentials.
+-   **Role-Based Access:** Separate views for Admin, HOD, Principal, and Employee.
+-   **HOD Management:** HODs can register and remove employees.
+-   **Principal Management:** Principals can register and remove HODs and employees.
+-   **Leave Request System:** Employees can submit leave requests. HODs can approve/reject employee leave requests, and the Principal can approve/reject HOD leave requests.
+-   **Announcement System:** Functionality to fetch, create, and delete announcements.
+-   **Dashboard:** Provides key metrics like total employees and employees on leave.
+
+## Data Storage
+
+All application data is currently stored in `hrms_backend/db.json`. This is a simple file-based JSON database for development purposes. In a production environment, this would typically be replaced by a relational database (e.g., PostgreSQL, MySQL) or a NoSQL database.
+
+## Frontend Development (Requires Manual Setup)
+
+Due to environmental issues (persistent `npm` errors), the React frontend was not automatically set up. Instructions on how to manually create and configure the React frontend using Vite and integrate it with the Django backend are provided in the `README.md` file. The frontend will consume the API endpoints exposed by the Django backend.
+
+## How to use this `about.txt`
+
+This file is intended to give you a quick understanding of the project's structure and the purpose of its main components. For detailed code-level explanations, you would need to refer directly to the source code files, especially `api/views.py` for backend API logic and `frontend/src/App.jsx` for frontend UI logic.

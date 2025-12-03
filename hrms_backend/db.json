@@ -1,0 +1,685 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "username": "employee",
+      "password": "employee",
+      "role": "employee"
+    },
+    {
+      "username": "hod@example.com",
+      "password": "password",
+      "role": "HOD"
+    },
+    {
+      "username": "emp1@example.com",
+      "password": "password",
+      "role": "employee"
+    },
+    {
+      "username": "user@example.com",
+      "password": "user",
+      "role": "employee"
+    },
+    {
+      "username": "arun@gmail.com",
+      "password": "arun",
+      "role": "HOD",
+      "name": "Arun"
+    },
+    {
+      "username": "HOD@gmail.com",
+      "password": "hod",
+      "role": "HOD"
+    },
+    {
+      "username": "hi@hi.com",
+      "password": "hi",
+      "role": "employee",
+      "name": "hi"
+    },
+    {
+      "username": "principal",
+      "password": "principal",
+      "role": "principal"
+    },
+    {
+      "username": "sushruthkayara@gmail.com",
+      "password": "Sushruth@21",
+      "role": "employee",
+      "name": "Sushruth K.B"
+    },
+    {
+      "username": "sushruth219@gmail.com",
+      "password": "Sushruth",
+      "role": "HOD",
+      "name": "Sushrutha"
+    },
+    {
+      "username": "tejasmurgod44@gmail.com",
+      "password": "tejas",
+      "role": "employee",
+      "name": "tejas"
+    }
+  ],
+  "hods": [
+    {
+      "hod_id": "hod123",
+      "email": "hod@example.com",
+      "password": "password"
+    },
+    {
+      "hod_id": "25f03dc3-40ca-4d45-b20a-72d1d4327995",
+      "email": "HOD@gmail.com",
+      "password": "hod"
+    },
+    {
+      "hod_id": "c50fff7b-155f-45e5-830c-a7a4d35a2a61",
+      "name": "Arun",
+      "email": "arun@gmail.com",
+      "password": "arun",
+      "dob": "2025-11-05",
+      "phone": "9875411454"
+    },
+    {
+      "hod_id": "Sush",
+      "name": "Sushrutha",
+      "email": "sushruth219@gmail.com",
+      "password": "Sushruth",
+      "dob": "2025-12-01",
+      "phone": "7598411268"
+    }
+  ],
+  "principals": [
+    {
+      "principal_id": "Principal123",
+      "email": "principal@school.com",
+      "password": "principal",
+      "name": "Principal"
+    }
+  ],
+  "employees": [
+    {
+      "employee_id": "1234",
+      "email": "user@example.com",
+      "password": "user",
+      "name": "user",
+      "assigned_hod": "hod@example.com"
+    },
+    {
+      "employee_id": "emp002",
+      "email": "john.doe@company.com",
+      "password": "john123",
+      "name": "John Doe",
+      "dob": "1990-05-15",
+      "phone": "9876543210",
+      "assigned_hod": "hod@example.com"
+    },
+    {
+      "employee_id": "02c18695-aa1e-4eab-a884-b1598a7e2776",
+      "name": "emp1",
+      "email": "emp1@example.com",
+      "password": "default_pass",
+      "dob": "",
+      "phone": "",
+      "assigned_hod": "HOD@gmail.com"
+    },
+    {
+      "employee_id": "emp003",
+      "email": "jane.smith@company.com",
+      "password": "jane123",
+      "name": "Jane Smith",
+      "dob": "1992-08-22",
+      "phone": "9876543211",
+      "assigned_hod": "HOD@gmail.com"
+    },
+    {
+      "employee_id": "hi",
+      "email": "hi@hi.com",
+      "password": "hi",
+      "name": "hi",
+      "dob": "2025-12-01",
+      "phone": "9234122932",
+      "assigned_hod": "arun@gmail.com"
+    },
+    {
+      "employee_id": "emp005",
+      "email": "mike.wilson@company.com",
+      "password": "mike123",
+      "name": "Mike Wilson",
+      "dob": "1985-12-10",
+      "phone": "9876543212",
+      "assigned_hod": "arun@gmail.com"
+    },
+    {
+      "employee_id": "b3217894-fc81-481f-8b12-4e77faad3bcb",
+      "email": "employee",
+      "password": "employee",
+      "name": "employee",
+      "dob": "",
+      "phone": "",
+      "assigned_hod": 6
+    },
+    {
+      "employee_id": "2jh23AI053",
+      "email": "sushruthkayara@gmail.com",
+      "password": "Sushruth@21",
+      "name": "Sushruth K.B",
+      "dob": "2005-09-21",
+      "phone": "8310933593",
+      "assigned_hod": 6
+    },
+    {
+      "employee_id": "1234qaz",
+      "email": "tejasmurgod44@gmail.com",
+      "password": "tejas",
+      "name": "tejas",
+      "dob": "2021-09-09",
+      "phone": "8618684522",
+      "assigned_hod": "hod@example.com"
+    }
+  ],
+  "leave_requests": [
+    {
+      "request_id": "6ec73da4-a1e8-426d-9a3f-8bb63bc47963",
+      "employee_id": "employee",
+      "reason": "hi",
+      "status": "rejected",
+      "role": "employee"
+    },
+    {
+      "request_id": "lr001",
+      "employee_id": "emp123",
+      "reason": "Vacation",
+      "status": "approved",
+      "role": "employee"
+    },
+    {
+      "request_id": "6bc394fa-f1fe-4dfa-a2a4-690734612d2e",
+      "employee_id": "employee",
+      "reason": "hi",
+      "status": "approved",
+      "role": "employee"
+    },
+    {
+      "request_id": "4ca3cd7b-f2d6-4646-940e-b85818803617",
+      "employee_id": "employee",
+      "start_date": "2025-11-04",
+      "end_date": "2025-11-24",
+      "reason": "ss",
+      "status": "approved",
+      "role": "employee"
+    },
+    {
+      "request_id": "b91bf442-cdf3-4c26-8e87-368e336ff1dd",
+      "employee_id": "employee",
+      "start_date": "2025-12-01",
+      "end_date": "2025-12-02",
+      "reason": "just checking",
+      "status": "pending",
+      "role": "employee"
+    },
+    {
+      "request_id": "e7a93625-f393-4805-ac26-3390ef8f6450",
+      "employee_id": "employee",
+      "start_date": "2025-12-09",
+      "end_date": "2025-12-17",
+      "reason": "retrying",
+      "status": "pending",
+      "role": "employee"
+    },
+    {
+      "request_id": "72ef136a-6e3a-4754-b321-97e6b539c563",
+      "employee_id": "employee",
+      "start_date": "2025-12-17",
+      "end_date": "2025-12-29",
+      "reason": "fever",
+      "status": "pending",
+      "role": "employee"
+    },
+    {
+      "request_id": "af4063a5-3c6d-4326-924d-1b1adc157bb6",
+      "employee_id": "02c18695-aa1e-4eab-a884-b1598a7e2776",
+      "start_date": "2025-12-10",
+      "end_date": "2025-12-11",
+      "reason": "Test leave request",
+      "status": "pending",
+      "role": "employee"
+    },
+    {
+      "request_id": "4374be1d-41bd-407f-afb8-40608e8cbc44",
+      "employee_id": "02c18695-aa1e-4eab-a884-b1598a7e2776",
+      "start_date": "2025-12-10",
+      "end_date": "2025-12-11",
+      "reason": "Test leave request",
+      "status": "pending",
+      "role": "employee"
+    },
+    {
+      "request_id": "1db09df7-d375-4486-be0d-bcdb4115ad02",
+      "employee_id": "02c18695-aa1e-4eab-a884-b1598a7e2776",
+      "start_date": "2025-12-10",
+      "end_date": "2025-12-11",
+      "reason": "Test leave request",
+      "status": "pending",
+      "role": "employee"
+    },
+    {
+      "request_id": "5733ae74-5eec-44c6-9aae-a92c578a29db",
+      "employee_id": "sushruthkayara@gmail.com",
+      "start_date": "2025-12-03",
+      "end_date": "2025-12-04",
+      "reason": "I have to attend festival",
+      "status": "rejected",
+      "role": "employee"
+    },
+    {
+      "request_id": "f3fc70c9-bcec-46a6-a300-f2df430566ae",
+      "employee_id": "b3217894-fc81-481f-8b12-4e77faad3bcb",
+      "start_date": "2025-12-10",
+      "end_date": "2025-12-11",
+      "reason": "Test leave request",
+      "status": "pending",
+      "role": "employee"
+    },
+    {
+      "request_id": "e9d7704d-a60c-4927-b3bf-f9af9ab9f5fd",
+      "employee_id": "b3217894-fc81-481f-8b12-4e77faad3bcb",
+      "start_date": "2025-12-15",
+      "end_date": "2025-12-16",
+      "reason": "Test with proper employee_id",
+      "status": "pending",
+      "role": "employee"
+    },
+    {
+      "request_id": "c7f34afd-9859-4953-b922-41213ff0b90f",
+      "employee_id": "c382d36a-1015-4881-8dd5-0dea0b4bb744",
+      "start_date": "2025-12-04",
+      "end_date": "2025-12-05",
+      "reason": "fever and cold",
+      "status": "approved",
+      "role": "employee"
+    },
+    {
+      "request_id": "1e40e633-2e00-4aa7-9575-4f72bbeb8e3c",
+      "employee_id": "2jh23AI053",
+      "start_date": "2025-12-04",
+      "end_date": "2025-12-05",
+      "reason": "Study Holiday for upcoming Exam",
+      "status": "approved",
+      "role": "employee"
+    }
+  ],
+  "announcements": [
+    {
+      "announcement_id": "c0a8ac8b-0419-460f-a3ba-533bd4bb3d5a",
+      "title": "Greetings",
+      "content": "Hello Everyone",
+      "created_by": "admin",
+      "created_by_role": "admin"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "2c5a24c2-a2dd-441f-9edb-1123c27bbf7a",
+      "employee_id": "employee",
+      "message": "\u2705 Your leave request (Reason: hi) has been GRANTED.",
+      "timestamp": "2025-12-01 01:44:01.090544",
+      "read_status": true,
+      "type": "leave_status_update",
+      "related_request_id": "6bc394fa-f1fe-4dfa-a2a4-690734612d2e"
+    },
+    {
+      "id": "ca765d08-d22d-41b3-a758-95635ca9718b",
+      "employee_id": "employee",
+      "message": "\u274c Your leave request (Reason: hi) has been REFUSED.",
+      "timestamp": "2025-12-01 01:44:24.387253",
+      "read_status": true,
+      "type": "leave_status_update",
+      "related_request_id": "6ec73da4-a1e8-426d-9a3f-8bb63bc47963"
+    },
+    {
+      "id": "8176e489-4643-4a62-8e30-6c1df6dbcee6",
+      "employee_id": "employee",
+      "message": "\u2705 Your leave request (Reason: ss) has been GRANTED.",
+      "timestamp": "2025-12-01 01:44:31.361844",
+      "read_status": true,
+      "type": "leave_status_update",
+      "related_request_id": "4ca3cd7b-f2d6-4646-940e-b85818803617"
+    },
+    {
+      "id": "6a1e722a-0a4a-44e6-9a89-0cd34c18094d",
+      "employee_id": "2jh23AI053",
+      "message": "\u2705 Your leave request (Reason: Study Holiday for upcoming Exam) has been GRANTED.",
+      "timestamp": "2025-12-03 02:41:38.179835",
+      "read_status": true,
+      "type": "leave_status_update",
+      "related_request_id": "1e40e633-2e00-4aa7-9575-4f72bbeb8e3c"
+    },
+    {
+      "id": "c5edf9ef-fd18-4f91-a2db-fb839f56fb36",
+      "employee_id": "sushruthkayara@gmail.com",
+      "message": "\u274c Your leave request (Reason: I have to attend festival) has been REFUSED.",
+      "timestamp": "2025-12-03 02:42:00.222100",
+      "read_status": false,
+      "type": "leave_status_update",
+      "related_request_id": "5733ae74-5eec-44c6-9aae-a92c578a29db"
+    },
+    {
+      "id": "1d79f11e-be3d-49a1-83e8-2ca07653b182",
+      "employee_id": "c382d36a-1015-4881-8dd5-0dea0b4bb744",
+      "message": "\u2705 Your leave request (Reason: fever and cold) has been GRANTED.",
+      "timestamp": "2025-12-03 12:02:02.823678",
+      "read_status": false,
+      "type": "leave_status_update",
+      "related_request_id": "c7f34afd-9859-4953-b922-41213ff0b90f"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "a0bcd3aa-a016-4e69-bb29-7a575ac1bbd7",
+      "employee_id": "employee",
+      "date": "2025-11-30",
+      "status": "present",
+      "marked_at": "2025-12-01 02:34:56.048625"
+    },
+    {
+      "id": "12a8a693-9010-46c2-9e88-0ad19325814f",
+      "employee_id": "employee",
+      "date": "2025-12-02",
+      "status": "absent",
+      "marked_at": "2025-12-02 02:38:19.231129",
+      "auto_marked": true
+    },
+    {
+      "id": "f974ef7c-1da5-48b2-a0de-311f19207e0c",
+      "employee_id": "employee",
+      "date": "2025-12-01",
+      "status": "absent",
+      "marked_at": "2025-12-02 02:38:19.231155",
+      "auto_marked": true
+    },
+    {
+      "id": "ed72f2ff-759d-4a68-984b-da0ce5a3a33f",
+      "employee_id": "emp1@example.com",
+      "date": "2025-12-02",
+      "status": "absent",
+      "marked_at": "2025-12-02 02:38:19.231173",
+      "auto_marked": true
+    },
+    {
+      "id": "652c0d6d-ecf3-4f72-8afa-cc95dcaad934",
+      "employee_id": "emp1@example.com",
+      "date": "2025-12-01",
+      "status": "absent",
+      "marked_at": "2025-12-02 02:38:19.231188",
+      "auto_marked": true
+    },
+    {
+      "id": "ed994d44-8cb6-4d12-930f-9d4f34ac8b13",
+      "employee_id": "user@example.com",
+      "date": "2025-12-02",
+      "status": "absent",
+      "marked_at": "2025-12-02 02:38:19.231203",
+      "auto_marked": true
+    },
+    {
+      "id": "7fc37189-e691-4243-bc75-dd4c6bbd5700",
+      "employee_id": "user@example.com",
+      "date": "2025-12-01",
+      "status": "absent",
+      "marked_at": "2025-12-02 02:38:19.231216",
+      "auto_marked": true
+    },
+    {
+      "id": "16941289-465a-4f33-b724-14deedaaa925",
+      "employee_id": "hi@hi.com",
+      "date": "2025-12-02",
+      "status": "absent",
+      "marked_at": "2025-12-02 02:38:19.231230",
+      "auto_marked": true
+    },
+    {
+      "id": "f692f94b-73a1-4067-80b4-d0f0eaacd452",
+      "employee_id": "hi@hi.com",
+      "date": "2025-12-01",
+      "status": "absent",
+      "marked_at": "2025-12-02 02:38:19.231242",
+      "auto_marked": true
+    },
+    {
+      "id": "3031e8c1-b85a-4f5b-8304-74fb1fdace26",
+      "employee_id": "sushruthkayara@gmail.com",
+      "date": "2025-12-02",
+      "status": "absent",
+      "marked_at": "2025-12-02 23:55:51.786105",
+      "auto_marked": true
+    },
+    {
+      "id": "604982a1-09ff-469e-aaa2-59e6c2419a9a",
+      "employee_id": "sushruthkayara@gmail.com",
+      "date": "2025-12-01",
+      "status": "absent",
+      "marked_at": "2025-12-02 23:55:51.786179",
+      "auto_marked": true
+    },
+    {
+      "id": "3221c133-2ffe-44e5-9bb3-21996e7e18d5",
+      "employee_id": "employee",
+      "date": "2025-12-03",
+      "status": "absent",
+      "marked_at": "2025-12-03 00:00:01.526354",
+      "auto_marked": true
+    },
+    {
+      "id": "e6e006f4-eeaa-4c91-b65a-84b60b8664a3",
+      "employee_id": "emp1@example.com",
+      "date": "2025-12-03",
+      "status": "absent",
+      "marked_at": "2025-12-03 00:00:01.526383",
+      "auto_marked": true
+    },
+    {
+      "id": "32496133-c37e-4d16-b497-9d054082ce3f",
+      "employee_id": "user@example.com",
+      "date": "2025-12-03",
+      "status": "absent",
+      "marked_at": "2025-12-03 00:00:01.526403",
+      "auto_marked": true
+    },
+    {
+      "id": "7bd65660-db33-4f22-82a7-25fd5f0626b4",
+      "employee_id": "hi@hi.com",
+      "date": "2025-12-03",
+      "status": "absent",
+      "marked_at": "2025-12-03 00:00:01.526421",
+      "auto_marked": true
+    },
+    {
+      "id": "32cb8ee8-6540-454f-8ca7-1c4d39e67cf8",
+      "employee_id": "sushruthkayara@gmail.com",
+      "date": "2025-12-03",
+      "status": "absent",
+      "marked_at": "2025-12-03 00:00:01.526439",
+      "auto_marked": true
+    },
+    {
+      "id": "299f5dbb-a5ee-4183-891f-ab46f63ca34b",
+      "employee_id": "02c18695-aa1e-4eab-a884-b1598a7e2776",
+      "date": "2025-12-03",
+      "status": "present",
+      "marked_at": "2025-12-03 00:05:34.846338",
+      "auto_marked": false
+    },
+    {
+      "id": "cec7518b-2a7c-4b30-a01a-162f7a5b769c",
+      "employee_id": "b3217894-fc81-481f-8b12-4e77faad3bcb",
+      "date": "2025-12-03",
+      "status": "present",
+      "marked_at": "2025-12-03 00:15:04.884213",
+      "auto_marked": false
+    },
+    {
+      "id": "45ea8335-ae32-4993-bcbb-62ad53ebdbe9",
+      "employee_id": "b3217894-fc81-481f-8b12-4e77faad3bcb",
+      "date": "2025-12-04",
+      "status": "present",
+      "marked_at": "2025-12-03 00:18:35.620944",
+      "auto_marked": false
+    },
+    {
+      "id": "5372f811-57e3-4e93-b439-9bd565c3175e",
+      "employee_id": "c382d36a-1015-4881-8dd5-0dea0b4bb744",
+      "date": "2025-12-02",
+      "status": "present",
+      "marked_at": "2025-12-03 00:25:37.750669",
+      "auto_marked": false
+    },
+    {
+      "id": "97076516-f380-41e1-97ee-38a3991895ad",
+      "employee_id": "2jh23AI053",
+      "date": "2025-12-02",
+      "status": "present",
+      "marked_at": "2025-12-03 02:16:36.795047",
+      "auto_marked": false
+    },
+    {
+      "id": "777e37fd-cd9b-438f-80ee-d8b3a3bddf02",
+      "employee_id": "tejasmurgod44@gmail.com",
+      "date": "2025-12-03",
+      "status": "absent",
+      "marked_at": "2025-12-03 11:37:35.912758",
+      "auto_marked": true
+    },
+    {
+      "id": "65330afb-de7b-414e-8249-4bb05adbfce7",
+      "employee_id": "tejasmurgod44@gmail.com",
+      "date": "2025-12-02",
+      "status": "absent",
+      "marked_at": "2025-12-03 11:37:35.912783",
+      "auto_marked": true
+    },
+    {
+      "id": "2e2822c7-111b-4032-970d-c145d354fe72",
+      "employee_id": "2jh23AI053",
+      "date": "2025-12-03",
+      "status": "present",
+      "marked_at": "2025-12-03 12:03:11.811920",
+      "auto_marked": false
+    }
+  ],
+  "Todo": [
+    {
+      "id": 1,
+      "task_id": "TASK001",
+      "description": "Complete project documentation",
+      "created_by_name": "admin",
+      "created_at": "2025-12-01T10:00:00Z",
+      "modified_by_name": "admin",
+      "modified_at": "2025-12-01T10:00:00Z",
+      "progression": "in_process",
+      "modification_history": []
+    },
+    {
+      "id": 2,
+      "task_id": "TASK002",
+      "description": "Review employee attendance records",
+      "created_by_name": "admin",
+      "created_at": "2025-12-01T11:00:00Z",
+      "modified_by_name": "admin",
+      "modified_at": "2025-12-01T11:00:00Z",
+      "progression": "pending",
+      "modification_history": []
+    },
+    {
+      "id": 3,
+      "task_id": "TASK003",
+      "description": "Prepare monthly performance reports",
+      "created_by_name": "admin",
+      "created_at": "2025-12-01T12:00:00Z",
+      "modified_by_name": "admin",
+      "modified_at": "2025-12-01T12:00:00Z",
+      "progression": "completed",
+      "modification_history": []
+    },
+    {
+      "task_id": "TASK004",
+      "description": "Test new task",
+      "created_by_name": "test",
+      "id": 4,
+      "created_at": "2025-12-02 02:51:00.970685",
+      "modified_at": "2025-12-02 02:51:00.970694",
+      "progression": "pending",
+      "modification_history": []
+    },
+    {
+      "task_id": "TASK005",
+      "description": "Do nothing",
+      "created_by_name": "arun",
+      "id": 5,
+      "created_at": "2025-12-02T10:00:00Z",
+      "modified_at": "2025-12-02T10:00:00Z",
+      "progression": "pending",
+      "modification_history": []
+    },
+    {
+      "task_id": "TASK006",
+      "description": "MINIPROJECT REPORT",
+      "created_by_name": "Sushruth K.B",
+      "id": 6,
+      "created_at": "2025-12-03 00:24:56.218573",
+      "modified_at": "2025-12-03 00:24:56.218582",
+      "progression": "pending",
+      "modification_history": []
+    },
+    {
+      "task_id": "TASK007",
+      "description": "Just Testing",
+      "created_by_name": "admin",
+      "id": 7,
+      "created_at": "2025-12-03 02:26:59.552074",
+      "modified_at": "2025-12-03 02:35:31.934980",
+      "progression": "in_process",
+      "modification_history": [
+        "Modified at 2025-12-03 02:35:31.934990"
+      ],
+      "modified_by_name": "Sushruth K.B"
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Engineering",
+      "description": "Software development and IT infrastructure"
+    },
+    {
+      "id": 2,
+      "name": "Human Resources",
+      "description": "Employee management and welfare"
+    },
+    {
+      "id": 3,
+      "name": "Finance",
+      "description": "Financial planning and accounting"
+    },
+    {
+      "id": 4,
+      "name": "Marketing",
+      "description": "Brand management and customer outreach"
+    },
+    {
+      "id": 5,
+      "name": "Operations",
+      "description": "Day-to-day business operations"
+    },
+    {
+      "id": 6,
+      "name": "AIML",
+      "description": "AIML"
+    }
+  ]
+}
