@@ -1,0 +1,23 @@
+asgiref==3.11.0
+Django==5.2.8
+django-cors-headers==4.9.0
+django-allauth==65.13.0
+PyJWT==2.10.1
+cryptography==45.0.4
+djangorestframework==3.16.1
+sqlparse==0.5.3
+
+
+
+
+# Database (Optional - for production databases)
+# Uncomment when switching from SQLite to PostgreSQL
+# psycopg2-binary==2.9.9
+# Or for MySQL:
+# mysqlclient==2.2.4
+
+# Additional Development Tools (Optional)
+# Uncomment for enhanced development experience
+# django-debug-toolbar==4.4.6
+# django-extensions==3.2.3
+# pillow==10.4.0  # For image/file handling

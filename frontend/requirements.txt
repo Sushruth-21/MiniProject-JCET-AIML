@@ -1,0 +1,53 @@
+# Frontend dependencies (reference list for the Vite/React app)
+# Format used in this file: package@version
+# Source of truth remains package.json.
+
+# Core React framework
+react@19.2.0
+react-dom@19.2.0
+
+# Routing
+react-router-dom@7.9.6
+
+# HTTP client
+axios@1.13.2
+
+# UI components
+react-rnd@10.5.2
+
+# Development dependencies
+@vitejs/plugin-react@5.1.1
+vite@7.2.4
+eslint@9.39.1
+@eslint/js@9.39.1
+eslint-plugin-react-hooks@7.0.1
+eslint-plugin-react-refresh@0.4.24
+globals@16.5.0
+@types/react@19.2.5
+@types/react-dom@19.2.3
+
+# Optional UI libraries (uncomment when needed)
+# @mui/material@5.15.0
+# @emotion/react@11.11.0
+# @emotion/styled@11.11.0
+
+# Chart libraries
+# recharts@2.8.0
+# chart.js@4.4.0
+# react-chartjs-2@5.2.0
+
+# Date handling
+# date-fns@2.30.0
+# dayjs@1.11.0
+
+# Form handling
+# react-hook-form@7.48.0
+# yup@1.4.0
+
+# State management (if needed)
+# @reduxjs/toolkit@1.9.0
+# react-redux@8.1.0
+
+# Additional utilities
+# lodash@4.17.21
+# @types/lodash@4.14.0
